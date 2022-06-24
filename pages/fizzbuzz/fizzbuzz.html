@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="../../resoures/js/jquery.min.js"></script>
+    <script src="../../resoures/js/semantic.min.js"></script>
+    <script src="fizzbuzz.js"></script>
+
+    <link href="../../resoures/css/semantic.min.css" rel='stylesheet'>
 </head>
+
 <body>
-    
+
+    <div class="ui fluid container"
+        style="margin-top: 4rem; margin-bottom: 4rem; padding-left: 1rem; padding-right: 1rem;">
+        <div class="ui grid">
+
+            <form class="ui form">
+
+                <!-- <div class="ui left icon input">
+                    <input type="number" placeholder="number">
+                    <i class="huge keyboard outline icon"></i>
+                </div> -->
+
+                <div class="ui tiny form">
+                    <div class="ui left icon input">
+                        <input type="number" id="numberFizzBuzz" placeholder="กรุณาใส่ข้อมูลตัวเลข">
+                        <i class="keyboard outline icon"></i>
+                      </div>
+                    <div class="ui submit button" id="submitFizzBuzz" onclick="doSomething()" >Submit</div>
+                </div>
+            </form>
+
+
+            <div class="ui huge labels" style="display: none;" id="resultDisplay">
+                <div class="ui label" id="resultFizzBuzz">
+                  
+                </div>
+
+              </div>
+
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>
