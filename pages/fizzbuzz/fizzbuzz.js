@@ -19,5 +19,17 @@ function validateCondition(tempNumber) {
    
 }
 
+function hideResult(){
+    $('#resultDisplay').hide();
+}
+
+
+
+var name = "ddd";   var id = 1; 
+
+
+
+
+
 
 
