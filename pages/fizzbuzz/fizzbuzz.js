@@ -10,10 +10,10 @@ function validateCondition(tempNumber) {
 
 
     if (!temp_result) { // check temp_result  (!) **not ture 
-        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of FIZZ")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
+        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (FIZZ)")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
         $('#resultDisplay').show();  // show div id {resultDisplay}
     } else {
-        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of NOT") // set text {tempNumber} of NOT to id {resultFizzBuzz} 
+        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (NOT)") // set text {tempNumber} of NOT to id {resultFizzBuzz} 
         $('#resultDisplay').show(); // show div id {resultDisplay}
     }
    
