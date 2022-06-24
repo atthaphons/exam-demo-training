@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal Grade</title>
+    <script src="../../resoures/js/jquery.min.js"></script>
+    <script src="../../resoures/js/semantic.min.js"></script>
+    <script src="cal-grade.js"></script>
+ 
+    <link href="../../resoures/css/semantic.min.css" rel='stylesheet'>
+</head>
+
+
+<body>
+    <div class="ui fluid container"
+        style="margin-top: 4rem; margin-bottom: 4rem; padding-left: 1rem; padding-right: 1rem;">
+        <div class="ui grid">
+            <input id="currentScreenId" type="hidden" value="H001">
+            <input id="currentScreenInfo" type="hidden" value="H001 : Home">
+            <div class="sixteen wide column row" style="width:100%;" id="screenContent">
+            </div>
+        </div>
+
+        <div id="mainscreen" style="width: 100%;">
+            <div class="sixteen wide column row">
+
+                <form class="ui form" id="cal-form">
+
+                    <h4 class="ui dividing header">กรุณา กรอกคะแนน ตามรายวิชา</h4>
+                    <div class=" wide required field">
+
+                        <label>ชื่อ</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="number" name="idStd" >
+                            </div>
+
+                        </div>
+
+                        <label>วิชาภาษาไทย</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="number" name="score1" >
+                            </div>
+
+                        </div>
+
+                        <label>วิชาสังคม</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="number" name="score2" >
+                            </div>
+
+                        </div>
+
+                        <label>วิชาคณิตศาสตร์</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="number" name="score3" >
+                            </div>
+
+                        </div>
+
+                        <label>วิชาภาษาอังกฤษ</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="number" name="score4" >
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="ui error message"></div> -->
+
+                    <div class="ui button" tabindex="0" id="cal-button">คำนวน</div>
+                    <a class="ui label" id="total" name="total"></a>
+
+                    <a class="ui label" id="resultSum" name="resultSum"></a>
+                </form>
+
+            </div>
+
+
+            <form class="ui form">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden">
+                        <label>I agree to the Terms and Conditions</label>
+                    </div>
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+            </form>
+        
+            
+
+
+        </div>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

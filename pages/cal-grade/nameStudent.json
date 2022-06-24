@@ -1,0 +1,20 @@
+{
+    "data": {
+      "category1": {
+        "name": "65001",
+        "title": "Boss"
+      },
+      "category2": {
+        "name": "65002",
+        "title": "Bank"
+      },
+      "category3": {
+        "name": "65003",
+        "title": "Tea"
+      },
+      "category4": {
+        "name": "65004",
+        "title": "Non"
+      }
+    }
+  }
