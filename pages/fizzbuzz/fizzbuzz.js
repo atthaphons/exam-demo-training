@@ -4,10 +4,6 @@ function doSomething(){ // create fn
 
 }
 
-
-
-
-
 function validateCondition(tempNumber) {
     let temp_result = tempNumber % 3 // create variable for of (tempNumber) 
    console.log(temp_result+ " temp_result") // view debug log
