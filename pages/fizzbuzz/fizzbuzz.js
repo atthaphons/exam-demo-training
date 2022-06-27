@@ -1,32 +1,29 @@
-function doSomething(){ // create fn
-    let numberInput = $('#numberFizzBuzz').val(); // get value form id html and set to {numberInput}
-    validateCondition(numberInput) // call fn and send parameter {numberInput}
-
+function sumFn(){ // create fn
+    let numberInputA = parseFloat($('#numberOne').val());  // get value form id html and set to {numberInput}
+    let numberInputB = parseFloat($('#numberTwo').val());   
+    let sumTotal= numberInputA+numberInputB;
+    checkFizzBuzz(sumTotal) // call fn and send parameter {numberInput}
 }
 
-function validateCondition(tempNumber) {
-    let temp_result = tempNumber % 3 // create variable for of (tempNumber) 
-   console.log(temp_result+ " temp_result") // view debug log
-
-
-    if (!temp_result) { // check temp_result  (!) **not ture 
+function checkFizzBuzz(tempNumber) {
+    if (tempNumber % 15 === 0) {
+        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (FIZZBUZZ)")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
+        $('#resultDisplay').show();  // show div id {resultDisplay}
+    } else if (tempNumber % 3 === 0) {
         $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (FIZZ)")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
         $('#resultDisplay').show();  // show div id {resultDisplay}
+    } else if (tempNumber % 5 === 0) {
+        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (BUZZ)")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
+        $('#resultDisplay').show();  // show div id {resultDisplay}
     } else {
-        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (NOT)") // set text {tempNumber} of NOT to id {resultFizzBuzz} 
-        $('#resultDisplay').show(); // show div id {resultDisplay}
+        $('#resultFizzBuzz').text(tempNumber +" >>>>> : of (NOT)")  // set text {tempNumber} of FiZZ to id {resultFizzBuzz} 
+        $('#resultDisplay').show();  // show div id {resultDisplay}
     }
-   
 }
 
 function hideResult(){
     $('#resultDisplay').hide();
 }
-
-
-
-var name = "ddd";   var id = 1; 
-
 
 
 

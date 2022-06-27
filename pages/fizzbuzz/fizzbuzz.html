@@ -21,29 +21,35 @@
             <form class="ui form">
                 <div class="ui tiny form">
                     <div class="ui left icon input" >
-                        <input type="number" id="numberFizzBuzz" placeholder="กรุณาใส่ข้อมูลตัวเลข">
+                        <input type="number" id="numberOne" placeholder="ข้อมูล A">
                         <i class="keyboard outline icon"></i>
                     </div>
-                    <div class="ui submit button" id="submitFizzBuzz" onclick="doSomething()">Submit</div>
+
+                    <div class="ui left icon input" >
+                        <input type="number" id="numberTwo" placeholder="ข้อมูล B">
+                        <i class="keyboard outline icon"></i>
+
+                    </div>
+                    <div class="ui submit button" id="submitFizzBuzz" onclick="sumFn()">Submit</div>
                     <div class="ui green basic button" id="submitHide" onclick="hideResult()">Hide</div>
                 </div>
             </form>
 
+        </div>
 
+        <div class="ui grid">
 
             <div class="ui huge labels" style="display: none;" id="resultDisplay">
                 <div class="ui label" id="resultFizzBuzz">
                 </div>
             </div>
 
-
-
         </div>
     </div>
 
 
 
-    <div class="ui grid">
+    <!-- <div class="ui grid">
 
         <button>submit1</button>
         <div class="ui summit button">submit2</div>
@@ -60,7 +66,7 @@
         <button class="ui active button">
             <i class="paperclip icon"></i>
             Follow
-        </button>
+        </button> -->
 
 
 

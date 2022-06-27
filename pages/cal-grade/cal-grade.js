@@ -1,25 +1,26 @@
-// import myJson from './nameStudent.json' ;
-
-
-
 let CalFn = (function ($) {
     'use strict'
     return {
-        calcularate: function (data) {
-            console.log(data)
+        calcularate: function (sumScore) {
+            let total = (sumScore / 4);
+            if (total >= 80)
+                return "A";
+            else if (total > 69.99)
+                return "B";
+            else if (total > 59.99)
+                return "C";
+            else if (total > 49.99)
+                return "D";
+            else if (total < 50)
+                return "F";
         }
     }
-
-
 }(jQuery));
 
 $(document).ready(function () {
     'use strict'
-
-
-
-
-
+    $('#selectName')
+        .dropdown();
     $('#cal-form')
         .form({
             fields: {
@@ -77,36 +78,41 @@ $(document).ready(function () {
         });
 
     console.log("Hello")
-    let sumScore = 0;
+
     $('#cal-button').on('click', function (e) {
         if ($('#cal-form').form('validate form')) {
             let formData = $('#cal-form').form('get values');
+            let sumScore = 0;
             console.log(formData)
-            sumScore += formData.score1;
-            sumScore += formData.score2;
-            sumScore += formData.score3;
-            sumScore += formData.score4;
-
+            sumScore += parseFloat(formData.score1);
+            sumScore += parseFloat(formData.score2);
+            sumScore += parseFloat(formData.score3);
+            sumScore += parseFloat(formData.score4);
             $('#total').text(sumScore);
+            let avgScore = sumScore/4;
+
 
             $.getJSON('nameStudent.json', function (jd) {
-                if (formData.idStd === '65001') {
-                    $('#resultSum').text(jd.data.category1.title);
+                let idName = $('#cal-form [name="selectName"]').dropdown('get text');
+                if (idName === jd.data.category1.name) {
+                    $('#resultGrade').text("Name : " + jd.data.category1.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#resultDisplay').show();
                 }
-                if (formData.idStd === '65002') {
-                    $('#resultSum').text(jd.data.category2.title);
+                if (idName === jd.data.category2.name) {
+                    $('#resultGrade').text("Name : " + jd.data.category2.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#resultDisplay').show();
                 }
-
-                // console.log(jd.data)
-                // console.log(jd.data.category1.name)
+                if (idName === jd.data.category3.name) {
+                    $('#resultGrade').text("Name : " + jd.data.category3.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#resultDisplay').show();
+                }
+                if (idName === jd.data.category3.name) {
+                    $('#resultGrade').text("Name : " + jd.data.category4.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#resultDisplay').show();
+                }
             });
-
-           
-
             console.log(sumScore)
 
-
-            // CalFn.calcularate(formData);
         }
 
     });
