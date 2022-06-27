@@ -95,19 +95,31 @@ $(document).ready(function () {
             $.getJSON('nameStudent.json', function (jd) {
                 let idName = $('#cal-form [name="selectName"]').dropdown('get text');
                 if (idName === jd.data.category1.name) {
-                    $('#resultGrade').text("Name : " + jd.data.category1.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#nameOfGrade').text("Name : " +jd.data.category1.title);
+                    $('#avgScore').text(avgScore);
+                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
                 if (idName === jd.data.category2.name) {
-                    $('#resultGrade').text("Name : " + jd.data.category2.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#nameOfGrade').text("Name : " +jd.data.category2.title);
+                    $('#avgScore').text(avgScore);
+                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
                 if (idName === jd.data.category3.name) {
-                    $('#resultGrade').text("Name : " + jd.data.category3.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                    $('#nameOfGrade').text("Name : " +jd.data.category3.title);
+                    $('#avgScore').text(avgScore);
+                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
-                if (idName === jd.data.category3.name) {
-                    $('#resultGrade').text("Name : " + jd.data.category4.title + " ,Score : " + sumScore + " ,Avg Score : "+ avgScore   +" >>>>> : Grade " + CalFn.calcularate(sumScore));
+                if (idName === jd.data.category4.name) {
+                    $('#nameOfGrade').text("Name : " +jd.data.category4.title);
+                    $('#avgScore').text(avgScore);
+                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
             });
@@ -115,6 +127,12 @@ $(document).ready(function () {
 
         }
 
+    });
+
+
+
+    $('#clearForm').on("click", function () {
+        $('#cal-form').form('clear');
     });
 
 });

@@ -11,104 +11,170 @@
     <script src="cal-grade.js"></script>
 
     <link href="../../resoures/css/semantic.min.css" rel='stylesheet'>
+
+    <link href="../../resoures/css/semantic.min.css" rel='stylesheet'>
 </head>
 
-
 <body>
-    <div class="ui fluid container"
-        style="margin-top: 4rem; margin-bottom: 4rem; padding-left: 1rem; padding-right: 1rem;">
-        <div class="ui grid">
-            <input id="currentScreenId" type="hidden" value="H001">
-            <input id="currentScreenInfo" type="hidden" value="H001 : Home">
-            <div class="sixteen wide column row" style="width:100%;" id="screenContent">
+    <div class="ui menu">
+        <div class="header item">
+            Home
+        </div>
+        <a class="item">
+            About Us
+        </a>
+        <a class="item">
+            Jobs
+        </a>
+        <a class="item">
+            Locations
+        </a>
+    </div>
+    <div class="ui grid">
+        <div class="four wide column">
+            <div class="ui vertical  menu">
+                <div class="item">
+                    <div class="header">Programe Training</div>
+                    <div class="menu">
+                        <a id="HOME" class="item" data-tagtype="menuitem" data-auth="no"
+                            href="../tamplate-menu/menu.html">Menu</a>
+                        <a id="CAL-GRADE" class="item" data-tagtype="menuitem" data-auth="no"
+                            href="../cal-grade/cal-grade.html">Calculation Grade</a>
+                        <a id="CHECK-FIZZBUZZ" class="item" data-tagtype="menuitem" data-auth="no"
+                            href="../fizzbuzz/fizzbuzz.html">Check Fizz Buzz</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="header">Exam</div>
+                    <div class="menu">
+                        <a class="item">A</a>
+                        <a class="item">B</a>
+                        <a class="item">C</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="header">Hosting</div>
+                    <div class="menu">
+                        <a class="item">D</a>
+                        <a class="item">E</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="header">Support</div>
+                    <div class="menu">
+                        <a class="item">F</a>
+                        <a class="item">G</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="mainscreen" style="width: 100%;">
-            <div class="sixteen wide column row">
+        <div class="twelve wide stretched column">
+            <div class="ui segment">
+                <div id="mainscreen" style="width: 100%;">
+                    <div class="sixteen wide column row">
 
-                <form class="ui form" id="cal-form">
+                        <form class="ui form raised segment" id="cal-form">
 
-                    <h4 class="ui dividing header">กรุณา กรอกคะแนน ตามรายวิชา</h4>
-                    <div class=" wide required field">
-                        <div class="two fields">
-                            <div class="field">
-                                <div class="ui form">
+                            <h4 class="ui dividing header">กรุณา กรอกคะแนน ตามรายวิชา</h4>
+                            <div class=" wide required field">
+                                <div class="two fields">
                                     <div class="field">
-                                        <label>ชื่อ</label>
-                                        <select class="ui search dropdown" id="selectName" name="selectName">
-                                            <option value="65001">65001</option>
-                                            <option value="65002">65002</option>
-                                            <option value="65002">65003</option>
-                                            <option value="65002">65004</option>
-                                        </select>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <label>ชื่อ</label>
+                                                <select class="ui search dropdown" id="selectName" name="selectName">
+                                                    <option value="65001">65001</option>
+                                                    <option value="65002">65002</option>
+                                                    <option value="65002">65003</option>
+                                                    <option value="65002">65004</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
+
+                                </div>
+
+                                <label>วิชาภาษาไทย</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="number" name="score1">
+                                    </div>
+
+                                </div>
+
+                                <label>วิชาสังคม</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="number" name="score2">
+                                    </div>
+
+                                </div>
+
+                                <label>วิชาคณิตศาสตร์</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="number" name="score3">
+                                    </div>
+
+                                </div>
+
+                                <label>วิชาภาษาอังกฤษ</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="number" name="score4">
+                                    </div>
+
                                 </div>
                             </div>
 
-                        </div>
-
-                        <label>วิชาภาษาไทย</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="number" name="score1">
+                            <div style="width: 100%;">
+                                <div class="ui button blue" tabindex="0" id="cal-button">คำนวน</div>
+                                <div class="ui button red" tabindex="0" id="clearForm">ล้างข้อมูล</div>
                             </div>
 
-                        </div>
+                            <div style="width: 100%;">
+                                <div class="ui huge labels" style="display: none;" id="resultDisplay">
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    <div class="ui card">
+                                        <div class="content">
+                                            <i class="right floated like icon"></i>
+                                            <i class="right floated star icon"></i>
+                                            <div class="header">
+                                                <p id="nameOfGrade"></p>
+                                            </div>
+                                            <div class="description">
+                                             <p id="sumTotal">    </p> 
+                                        </div>
+                                        <div class="extra content">
+                                            <span class="left floated like">
+                                                <i class="like icon"></i>
+                                                Score AVG : <p id="avgScore"></p>
+                                            </span>
+                                            <span class="right floated star">
+                                                <i class="star icon"></i>
+                                                Grade : <p id="gradeCal"></p>
+                                            </span>
+                                        </div>
+                                    </div>
 
-                        <label>วิชาสังคม</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="number" name="score2">
+
+
+                                </div>
                             </div>
-
-                        </div>
-
-                        <label>วิชาคณิตศาสตร์</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="number" name="score3">
-                            </div>
-
-                        </div>
-
-                        <label>วิชาภาษาอังกฤษ</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="number" name="score4">
-                            </div>
-
-                        </div>
                     </div>
 
-                    <!-- <div class="ui error message"></div> -->
-                    <div class="ui grid">
-                        <div class="ui button" tabindex="0" id="cal-button">คำนวน</div>
-                    </div>
+                    </form>
 
-                </form>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="ui grid">
-
-            <div class="ui huge labels" style="display: none;" id="resultDisplay">
-                <div class="ui label" id="resultGrade">
                 </div>
+
+
             </div>
-
         </div>
-
     </div>
     </div>
-
-    </div>
-
-
 </body>
 
 </html>
