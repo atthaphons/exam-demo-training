@@ -17,8 +17,12 @@ let CalFn = (function ($) {
     }
 }(jQuery));
 
+
+
 $(document).ready(function () {
     'use strict'
+
+
     $('#selectName')
         .dropdown();
     $('#cal-form')
@@ -27,48 +31,48 @@ $(document).ready(function () {
                 score1: {
                     identifier: 'score1',
                     rules: [{
-                            type: 'empty',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาภาษาไทย ลงในช่องว่าง'
-                        },
-                        {
-                            type: 'maxLength[3]',
-                            prompt: 'ข้อมูลเกิน Limit'
-                        },
-                        {
-                            type: 'regExp[/^[0-9]+$/]',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาภาษาไทย เป็นตัวเลขเท่านั้น'
-                        }
+                        type: 'empty',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาภาษาไทย ลงในช่องว่าง'
+                    },
+                    {
+                        type: 'maxLength[3]',
+                        prompt: 'ข้อมูลเกิน Limit'
+                    },
+                    {
+                        type: 'regExp[/^[0-9]+$/]',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาภาษาไทย เป็นตัวเลขเท่านั้น'
+                    }
                     ]
                 },
                 score2: {
                     identifier: 'score2',
                     rules: [{
-                            type: 'empty',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาสังคม'
-                        },
-                        {
-                            type: 'maxLength[3]',
-                            prompt: 'ข้อมูลเกิน Limit'
-                        },
-                        {
-                            type: 'regExp[/^[0-9]+$/]',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาสังคม เป็นตัวเลขเท่านั้น'
-                        }
+                        type: 'empty',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาสังคม'
+                    },
+                    {
+                        type: 'maxLength[3]',
+                        prompt: 'ข้อมูลเกิน Limit'
+                    },
+                    {
+                        type: 'regExp[/^[0-9]+$/]',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาสังคม เป็นตัวเลขเท่านั้น'
+                    }
                     ]
                 },
                 score3: {
                     identifier: 'score3',
                     rules: [{
-                            type: 'empty',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาสังคม'
-                        },
-                        {
-                            type: 'maxLength[3]'
-                        },
-                        {
-                            type: 'regExp[/^[0-9]+$/]',
-                            prompt: 'กรุณา กรอกข้อมูล วิชาสังคม เป็นตัวเลขเท่านั้น'
-                        }
+                        type: 'empty',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาสังคม'
+                    },
+                    {
+                        type: 'maxLength[3]'
+                    },
+                    {
+                        type: 'regExp[/^[0-9]+$/]',
+                        prompt: 'กรุณา กรอกข้อมูล วิชาสังคม เป็นตัวเลขเท่านั้น'
+                    }
                     ]
                 },
                 score4: ['maxLength[3]', 'empty']
@@ -89,36 +93,36 @@ $(document).ready(function () {
             sumScore += parseFloat(formData.score3);
             sumScore += parseFloat(formData.score4);
             $('#total').text(sumScore);
-            let avgScore = sumScore/4;
+            let avgScore = sumScore / 4;
 
 
             $.getJSON('nameStudent.json', function (jd) {
                 let idName = $('#cal-form [name="selectName"]').dropdown('get text');
                 if (idName === jd.data.category1.name) {
-                    $('#nameOfGrade').text("Name : " +jd.data.category1.title);
+                    $('#nameOfGrade').text("Name : " + jd.data.category1.title);
                     $('#avgScore').text(avgScore);
-                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#sumTotal').text("Total : >>>>>  " + sumScore);
                     $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
                 if (idName === jd.data.category2.name) {
-                    $('#nameOfGrade').text("Name : " +jd.data.category2.title);
+                    $('#nameOfGrade').text("Name : " + jd.data.category2.title);
                     $('#avgScore').text(avgScore);
-                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#sumTotal').text("Total : >>>>>  " + sumScore);
                     $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
                 if (idName === jd.data.category3.name) {
-                    $('#nameOfGrade').text("Name : " +jd.data.category3.title);
+                    $('#nameOfGrade').text("Name : " + jd.data.category3.title);
                     $('#avgScore').text(avgScore);
-                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#sumTotal').text("Total : >>>>>  " + sumScore);
                     $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
                 if (idName === jd.data.category4.name) {
-                    $('#nameOfGrade').text("Name : " +jd.data.category4.title);
+                    $('#nameOfGrade').text("Name : " + jd.data.category4.title);
                     $('#avgScore').text(avgScore);
-                    $('#sumTotal').text("Total : >>>>>  "+sumScore);
+                    $('#sumTotal').text("Total : >>>>>  " + sumScore);
                     $('#gradeCal').text(CalFn.calcularate(sumScore));
                     $('#resultDisplay').show();
                 }
@@ -136,3 +140,12 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+
+
+
+
