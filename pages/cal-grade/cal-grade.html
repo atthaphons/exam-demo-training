@@ -36,12 +36,9 @@
                 <div class="item">
                     <div class="header">Programe Training</div>
                     <div class="menu">
-                        <a id="HOME" class="item" data-tagtype="menuitem" data-auth="no"
-                            href="../tamplate-menu/menu.html">Menu</a>
-                        <a id="CAL-GRADE" class="item" data-tagtype="menuitem" data-auth="no"
-                            href="../cal-grade/cal-grade.html">Calculation Grade</a>
-                        <a id="CHECK-FIZZBUZZ" class="item" data-tagtype="menuitem" data-auth="no"
-                            href="../fizzbuzz/fizzbuzz.html">Check Fizz Buzz</a>
+                        <a id="HOME" class="item" data-tagtype="menuitem" data-auth="no" href="../tamplate-menu/menu.html">Menu</a>
+                        <a id="CAL-GRADE" class="item" data-tagtype="menuitem" data-auth="no" href="../cal-grade/cal-grade.html">Calculation Grade</a>
+                        <a id="CHECK-FIZZBUZZ" class="item" data-tagtype="menuitem" data-auth="no" href="../fizzbuzz/fizzbuzz.html">Check Fizz Buzz</a>
                     </div>
                 </div>
                 <div class="item">
@@ -71,7 +68,25 @@
 
         <div class="twelve wide stretched column">
             <div class="ui segment">
+
+
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="four wide column ">2</div>
+                        <div class="four wide column ">3</div>
+                    </div>
+                    <div class="row">
+                        <div class="four wide column ">4</div>
+                        <div class="four wide column ">5</div>
+                    </div>
+                </div>
+
+
                 <div id="mainscreen" style="width: 100%;">
+
+
+
+
                     <div class="sixteen wide column row">
 
                         <form class="ui form raised segment" id="cal-form">
@@ -146,35 +161,38 @@
                                                 <p id="nameOfGrade"></p>
                                             </div>
                                             <div class="description">
-                                             <p id="sumTotal">    </p> 
+                                                <p id="sumTotal"> </p>
+                                            </div>
+                                            <div class="extra content">
+                                                <span class="left floated like">
+                                                    <i class="like icon"></i>
+                                                    Score AVG : <p id="avgScore"></p>
+                                                </span>
+                                                <span class="right floated star">
+                                                    <i class="star icon"></i>
+                                                    Grade : <p id="gradeCal"></p>
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div class="extra content">
-                                            <span class="left floated like">
-                                                <i class="like icon"></i>
-                                                Score AVG : <p id="avgScore"></p>
-                                            </span>
-                                            <span class="right floated star">
-                                                <i class="star icon"></i>
-                                                Grade : <p id="gradeCal"></p>
-                                            </span>
-                                        </div>
+
+
+
                                     </div>
-
-
-
                                 </div>
                             </div>
+
+                        </form>
+
                     </div>
 
-                    </form>
 
                 </div>
-
-
             </div>
         </div>
     </div>
-    </div>
+
+
+
 </body>
 
 </html>
